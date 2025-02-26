@@ -1,8 +1,8 @@
 #!/bin/bash
 #Script to download the necessary transcriptomes
-mkdir -p data
+mkdir -p full_data
 
-cd data
+cd full_data
 
 wget https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660030/SRR5660030 #Donor 1 (2dpi) transcriptome
 wget https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660033/SRR5660033 #Donor 1 (6dpi) transcriptome
