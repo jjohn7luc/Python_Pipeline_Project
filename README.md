@@ -30,7 +30,7 @@ The pipeline only runs under the assumption the file names for these transcripto
 
 The following command will allow you to download the transcriptomes if you do not have it already and write them into a directory named `/full_data`.
 ```bash
-./HCMV_donor_download
+./scripts/HCMV_donor_download
 ```
 
 ## Sample Data
