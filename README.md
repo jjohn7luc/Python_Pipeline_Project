@@ -51,5 +51,6 @@ You would change `data` to be the name of directory where your transcriptomes ar
 
 ### Results
 The script will create a new directory, `PipelineProject_Jerrin_John`. **Most outputs** from the softwares used, like Kallisto, Bowtie2, etc., will be written into this directory. All the results required for the project are written into the `PipelineProject.log file`, written in the required format. 
+
 The results with the requested output from running the pipeline with **all input reads** is in the `PipelineProject.log file` already included in this repository. 
 
