@@ -26,7 +26,7 @@ This pipeline project focuses specifically on the following transcriptomes:
 - SRR5660045 (Donor 3 (6dpi) transcriptome)
 
 The pipeline only runs under the assumption the file names for these transcriptomes are in the following format:
-`SRRXXXXXXX_1.fastq.gz / SRRXXXXXXX_1.fastq.gz`
+`SRRXXXXXXX_1.fastq.gz / SRRXXXXXXX_2.fastq.gz`
 
 The following command will allow you to download the transcriptomes if you do not have it already and write them into a directory named `/full_data`.
 ```bash
