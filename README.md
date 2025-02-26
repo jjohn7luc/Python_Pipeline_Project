@@ -49,7 +49,7 @@ python wrapper_script.py --input data
 ```
 You would change `data` to be the name of directory where your transcriptomes are located. 
 
-All the scripts called in the wrapper script is available in the `scripts` directory. General comments on what each script does is written in the wrapper script, while comments within each script provides more detail into its function.
+All the scripts called in the wrapper script is available in the `scripts` directory. General comments on what each script does is written in the wrapper script, while comments within each script provide more detail into its function.
 
 ### Results
 The wrapper script will create a new directory, `PipelineProject_Jerrin_John`. **Most outputs** from the softwares used, like SPAdes, Bowtie2, etc., will be written into this directory. All the results required for the project are written into the `PipelineProject.log file`, written in the required format. 
