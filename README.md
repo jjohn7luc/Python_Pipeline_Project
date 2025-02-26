@@ -35,7 +35,7 @@ The following command will allow you to download the transcriptomes if you do no
 
 ## Sample Data
 
-A condensed version of the transcriptomes, which contains only 10,000 reads per fastq file is available for use in the `data` directory provided in this repo. This dataset is ideal for testing the entire pipeline quickly.
+A condensed version of the transcriptomes, which only contains  10,000 reads per fastq file is available for use in the `data` directory provided in this repo. This dataset is ideal for testing the entire pipeline quickly.
 
 ## Running the Pipeline
 
