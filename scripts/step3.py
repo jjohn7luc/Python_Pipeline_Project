@@ -37,7 +37,7 @@ for root, dirs, files in os.walk(results_dir): #Loops through all directories in
                     tpm_values.append(tpm) #Add tpm to list
                     # Calculate the statistics if there are TPM values
             min_tpm, max_tpm, median_tpm, mean_tpm = calculate_tpm_stats(tpm_values)
-            sample_id = root[8:]
+            sample_id = root[17:]
             curr_sample_info.append(str(sample_id))
             if sample_id == "SRR5660030" or sample_id == "SRR5660044": #add correct condition depending on sample id
                 condition = "2dpi"
@@ -62,6 +62,7 @@ with open(log_file_path, 'a') as log_file:
     for row in final_result_list:
         # Join the list into a string with tab separation and write it to the file
         log_file.write("\t".join(map(str, row)) + "\n")
+    log_file.write('\n')
 
 #Creates sleuth table for next step
 sleuth_table = "./PipelineProject_Jerrin_John/sleuth_table.txt"

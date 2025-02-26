@@ -13,11 +13,11 @@ unzip ncbi_dataset.zip
 #Make directory to store index
 mkdir index
 #Build bowtie index
-bowtie2-build ncbi_dataset/data/GCF_000845245.1/GCF_000845245.1_ViralProj14559_genomic.fna ./index/HCMV
+bowtie2-build ncbi_dataset/data/GCF_000845245.1/GCF_000845245.1_ViralProj14559_genomic.fna HCMV
 
 #Store index and data locations
 data_dir=$DATA_LOC
-index="./PipelineProject_Jerrin_John/bowtie2_index/index/HCMV"
+index="./PipelineProject_Jerrin_John/bowtie2_index/HCMV"
 
 cd ..
 cd ..
@@ -42,7 +42,7 @@ do
     reads_before=$(zgrep -c "^@" "$fastq1")
 
     # Run Bowtie2, keeping only mapped reads
-    bowtie2 --quiet -x ./index/HCMV -1 "$fastq1" -2 "$fastq2" -S "$output_dir/$srr.sam" \
+    bowtie2 --quiet -x "$index" -1 "$fastq1" -2 "$fastq2" -S "$output_dir/$srr.sam" \
         --al-conc-gz "$output_dir/${srr}_mapped_%.fq.gz" 
 
     # Count mapped reads using presence of @
@@ -60,6 +60,8 @@ do
     fi
 
 done
+
+echo "" >> "$log_file"
 
 
 

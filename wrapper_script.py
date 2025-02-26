@@ -29,7 +29,7 @@ os.system("python3 ./scripts/step2.py >> PipelineProject_Jerrin_John/PipelinePro
 os.system("kallisto index -i PipelineProject_Jerrin_John/index.idx PipelineProject_Jerrin_John/HCMV_CDS_DNA.fasta")
 
 #Create a directory to save Kallisto results
-os.sysem("mkdir PipelineProject_Jerrin_John/results")
+os.system("mkdir PipelineProject_Jerrin_John/results")
 
 #Make kallisto quantification script active
 os.system("chmod +x ./scripts/kallistoscript.sh")
@@ -52,6 +52,7 @@ with open(file_path, 'r') as file:
 log_file_path = "PipelineProject_Jerrin_John/PipelineProject.log"
 with open(log_file_path, 'a') as log_file:
     log_file.writelines(fdr_content)
+    log_file.write('\n')
 
 #Make bowtie2 script active
 os.system("chmod +x ./scripts/step5.sh")
@@ -89,7 +90,7 @@ with open(log_file_path, 'a') as log_file:
     log_file.write("Donor1:\n")
     log_file.write("sacc\tpident\tlength\tqstart\tqend\tsstart\tsend\tbitscore\tevalue\tstitle\n")
     log_file.writelines(donor1_blast)
-
+    log_file.write('\n')
 
 
 #Read the tab-delimited text file of Donor 3 blast results
